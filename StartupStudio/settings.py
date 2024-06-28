@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-5hda8i)c_+-7vm
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True))
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['0.0.0.0','startupstudio-timur123456.amvera.io']
 
 
 # Application definition
@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'NewsFeed.apps.NewsfeedConfig',
     'EventCalendar.apps.EventcalendarConfig',
     'core.apps.CoreConfig',
-    'crispy_forms',
-    'markdownx',
+    'crispy_forms',    'markdownx',
     'crispy_bootstrap5',
     'MyProfile',
 ]
