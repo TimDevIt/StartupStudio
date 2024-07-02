@@ -45,4 +45,4 @@ if __name__ == "__main__":
     add_guest_group()
     add_authorized_user_group()
     add_moderator_group()
-    print("Группы и разрешения успешно добавлены!")
+    print("Groups created!")
