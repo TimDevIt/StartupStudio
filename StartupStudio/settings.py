@@ -102,9 +102,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'test',
-        'USER': 'postgres',
+        'USER': 'postgre',
         'PASSWORD': '123456',
-        'HOST': '127.0.0.1',
+        'HOST': 'amvera-timur123456-cnpg-test-db-rw',
         'PORT': '5432',
     }
 }
