@@ -29,6 +29,10 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True))
 ALLOWED_HOSTS = ['0.0.0.0','startupstudio-timur123456.amvera.io','test-project-timur123456.amvera.io', 'project-timur123456.amvera.io']
 
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://project-timur123456.amvera.io'
+]
+
 # Application definition
 
 INSTALLED_APPS = [
