@@ -104,7 +104,7 @@ DATABASES = {
         'NAME': 'test',
         'USER': 'postgre',
         'PASSWORD': '123456',
-        'HOST': 'amvera-timur123456-cnpg-test-db-rw',
+        'HOST': 'amvera-timur123456-cnpg-db-rw',
         'PORT': '5432',
     }
 }
