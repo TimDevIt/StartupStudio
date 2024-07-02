@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-5hda8i)c_+-7vm
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True))
-ALLOWED_HOSTS = ['0.0.0.0','startupstudio-timur123456.amvera.io']
+ALLOWED_HOSTS = ['0.0.0.0','startupstudio-timur123456.amvera.io','test-project-timur123456.amvera.io']
 
 
 # Application definition
