@@ -7,15 +7,10 @@ build:
   requirementsPath: requirements.txt
 run:
   command: |
-      sh -c "
-      if [ ! -f /data/migrations_done ]; then
-        python3 manage.py showmigrations | grep '\[ \]' && python3 manage.py makemigrations --merge && touch /data/merge_done;
-        python3 manage.py migrate && touch /data/migrations_done;
-      else
-        echo 'Migrations already applied';
-      fi &&
-      python3 create_groups.py &&
-      python3 manage.py collectstatic --noinput &&
-      gunicorn StartupStudio.wsgi:application --bind 0.0.0.0:80"
+      python3 manage.py makemigrations &&
+      python3 manage.py migrate &&
+      python3 create_groups.py && 
+      python3 manage.py collectstatic
+      gunicorn StartupStudio.wsgi:application --bind 0.0.0.0:80
   persistenceMount: /data
-
+  containerPort: 80
