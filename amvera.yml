@@ -6,6 +6,9 @@ meta:
 build:
   requirementsPath: requirements.txt
 run:
-  command: gunicorn StartupStudio.wsgi:application  --bind 0.0.0.0:80
+  command: |
+      python3 manage.py makemigrations --merge &&
+      python3 manage.py migrate &&
+      gunicorn StartupStudio.wsgi:application --bind 0.0.0.0:80
   persistenceMount: /data
   containerPort: 80
