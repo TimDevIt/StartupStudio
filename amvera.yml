@@ -7,7 +7,7 @@ build:
   requirementsPath: requirements.txt
 run:
   command: |
-      python3 manage.py makemigrations --merge &&
+      python3 manage.py makemigrations &&
       python3 manage.py migrate &&
       gunicorn StartupStudio.wsgi:application --bind 0.0.0.0:80
   persistenceMount: /data
