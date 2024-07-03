@@ -42,7 +42,11 @@ def add_moderator_group():
 
 
 if __name__ == "__main__":
-    add_guest_group()
-    add_authorized_user_group()
-    add_moderator_group()
-    print("Groups created!")
+    if not Group.objects.filter(name="Гость"):
+        add_guest_group()
+    if not Group.objects.filter(name="Авторизованный пользователь"):
+        add_authorized_user_group()
+    if not Group.objects.filter(name="Модератор"):
+        add_moderator_group()
+    if Group.objects.all():
+        print("Groups created!")
