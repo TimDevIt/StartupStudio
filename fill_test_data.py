@@ -5,8 +5,14 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'StartupStudio.settings')
 django.setup()
 
-from core.models import Direction, Skill
+from core.models import Direction, Skill,EventType
 
+
+if not EventType.objects.all():
+    EventType.objects.create(event_type_name='ВКР')
+    EventType.objects.create(event_type_name='Хакатон')
+    EventType.objects.create(event_type_name='Конференция')
+    EventType.objects.create(event_type_name='Курс')
 
 if not Direction.objects.all():
     Direction.objects.create(direction_name='ИТ')
