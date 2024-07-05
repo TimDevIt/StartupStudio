@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-5hda8i)c_+-7vm
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True))
-ALLOWED_HOSTS = ['0.0.0.0','startupstudio-timur123456.amvera.io','test-project-timur123456.amvera.io', 'project-timur123456.amvera.io']
+ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0','startupstudio-timur123456.amvera.io','test-project-timur123456.amvera.io', 'project-timur123456.amvera.io']
 
 
 CSRF_TRUSTED_ORIGINS = [
@@ -103,15 +103,27 @@ WSGI_APPLICATION = 'StartupStudio.wsgi.application'
 
 #postgres settings:
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test',
-        'USER': 'postgre',
-        'PASSWORD': '123456',
-        'HOST': 'amvera-timur123456-cnpg-db-rw',
-        'PORT': '5432',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'test',
+       'USER': 'postgre',
+       'PASSWORD': '123456',
+       'HOST': 'amvera-timur123456-cnpg-db-rw',
+       'PORT': '5432',
+   }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'test',
+#         'USER': 'postgres',
+#         'PASSWORD': '123456',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
+
 # amvera-timur123456-cnpg-db-rw
 
 # Password validation

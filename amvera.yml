@@ -1,17 +1,18 @@
-meta:
-  environment: python
-  toolchain:
-    name: pip
-    version: 3.11.8
-build:
-  requirementsPath: requirements.txt
-run:
-  command: |
-      python3 manage.py makemigrations &&
-      python3 manage.py migrate &&
-      python3 create_groups.py && 
-      python3 fill_test_data.py &&
-      python3 manage.py collectstatic &&
-      gunicorn StartupStudio.wsgi:application --bind 0.0.0.0:80
-  persistenceMount: /data
-  containerPort: 80
+  meta:
+    environment: python
+    toolchain:
+      name: pip
+      version: 3.11.8
+  build:
+    requirementsPath: requirements.txt
+  run:
+    command: |
+        python3 manage.py makemigrations &&
+        python3 manage.py migrate &&
+        python3 create_groups.py && 
+        python3 fill_test_data.py &&
+        python3 manage.py collectstatic &&
+        python3 manage.py makeadmin
+        gunicorn StartupStudio.wsgi:application --bind 0.0.0.0:80
+    persistenceMount: /data
+    containerPort: 80

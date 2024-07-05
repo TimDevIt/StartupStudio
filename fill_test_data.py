@@ -5,7 +5,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'StartupStudio.settings')
 django.setup()
 
-from core.models import Direction, Skill,EventType
+from core.models import Direction, Skill, EventType
 
 
 if not EventType.objects.all():
